@@ -1,0 +1,726 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,500&family=Roboto:wght@300;500;700&family=Sofia+Sans+Semi+Condensed:wght@100;200;300;400;500;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body{
+    margin: 0;
+}
+/* container */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* calculator container */
+.calculator{
+    min-width: 320px;
+    max-width: 321px;
+    max-height: 600px;
+    min-height: 600px;
+    padding-bottom: 30px;
+    background-color: rgb(239, 239, 239);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 4px solid rgb(0, 60, 92);
+    position: relative;
+    transform: scale(1.01);
+    margin-top: 60px;
+}
+
+@media(max-width:1100px){
+    .calculator{
+        transform: scale(.8);
+    }
+}
+
+
+@media(max-width:400px){
+    .calculator{
+        transform: scale(.7);
+    }
+}
+
+.calculator .center{
+    position: absolute;
+    top: 173px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 110px;
+    min-height: 110px;
+    border-radius: 45%;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.544);
+}
+
+.calculator .closser{
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 339px;
+    max-width: 340px;
+    min-height: 320px;
+    max-height: 321px;
+    border-left: 11px solid rgb(0, 60, 92);
+    border-right: 11px solid rgb(0, 60, 92);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    box-shadow: 2px 7px rgba(207, 199, 199, 0.674);
+    box-shadow: 6px 0 4px -4px rgb(184, 164, 164)
+}
+
+.calculator .design-l{
+    position: absolute;
+    left: 1px;
+    top: 15px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 230px;
+    max-height: 200px;
+    border-bottom: 2.5px solid rgba(0, 0, 0, 0.441);
+    border-bottom-left-radius:35% ;
+    border-left: 2.5px solid rgba(0, 0, 0, 0.407);
+}
+
+.calculator .design-r{
+    position: absolute;
+    right: 1px;
+    top: 15px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 230px;
+    max-height: 200px;
+    border-bottom: 2.5px solid rgba(0, 0, 0, 0.392);
+    border-bottom-right-radius:35% ;
+    border-right: 2.5px solid rgba(0, 0, 0, 0.407);
+
+}
+
+@media(max-height:600px){ 
+    .calculator .design-l{
+     top: 17px;
+     min-height: 210px;
+    }
+    .calculator .design-r{
+        top: 17px;
+        min-height: 210px;
+    }
+    .calculator .center{
+        top: 153px;
+    }
+    .calculator{
+        margin-top: 30;
+    }
+ }
+
+@media(max-height:550px){
+    .calculator .design-l{
+     top: 18px;
+     min-height: 200px;
+    }
+    .calculator .design-r{
+        top: 18px;
+        min-height: 200px;    }
+
+    .calculator .center{
+        top: 140px;
+    }
+ }
+
+.calculator .border{
+    position: absolute;
+    bottom: -2px;
+    left: -4px;
+    min-width: 318px;
+    max-width: 318px;
+    border-bottom: 15px solid rgb(0, 60, 92);
+    border-radius: 40px;
+    min-height: 585px;
+    max-height: 586px;
+}
+
+/* Header of the calculator */
+.calculator .head-section{
+    max-width: 398px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.head-section .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-section .top .right{
+    max-width: 140px;
+    width: 100%;
+    height: 6.5vh;
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 10px;
+    margin-top: 2px;
+    border: 3px solid rgb(157, 157, 157);
+}
+
+.head-section .top .left h2{
+    margin: 0;
+    color: rgba(0, 0, 0, 0.762);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    padding-left: 24px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.head-section .top .left h5{
+    padding-left: 15px;
+    margin-top: -25px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+.head-section .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-section .bottom h5{
+    padding-left: 7px;
+    color: rgb(26, 180, 128);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+.head-section .bottom h6{
+    padding-right: 20px;
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* screen */
+.screen-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* screen input */
+.calculator .screen input{
+    min-width:285px;
+    height: 12vh;
+    background-color: rgba(107, 143, 120, 0.866);
+    border-radius: 5px;
+    box-shadow: 1.2px 2.5px 6px rgba(0, 0, 0, 0.79) inset;
+    pointer-events: none;
+}
+
+.calculator .screen{
+    position: relative;
+    overflow: hidden;
+}
+
+.screen-div{
+    position: absolute;
+    top: 30%;
+    right: 12px;
+    min-width:275px;
+    max-width:275px;
+    height: 9vh;
+    font-size: 35px;
+    text-align: right;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+}
+
+.screen-div-t{
+    position: absolute;
+    top: 31%;
+    right: 12px;
+    min-width:275px;
+    max-width:275px;
+    height: 9vh;
+    font-size: 30px;
+    text-align: right;
+    pointer-events: none;
+    overflow: hidden;
+    display: inline;
+}
+
+.screen-container .screen{
+    border-radius: 10px;
+    border-bottom: 9px solid rgba(32, 30, 30, 0.129) ;
+    border-left: 10px solid  rgba(14, 13, 13, 0.079) ;
+    border-right: 10px solid rgba(28, 27, 27, 0.123) ;
+    border-top: 5px solid rgba(21, 21, 21, 0.118) ;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.263);
+}
+
+/* main buttons */
+.main-buttons{
+    min-width: 290px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+.main-buttons .btn, .btn-r{
+    width: 35px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(120deg, rgba(45, 73, 107, 0.77) 77%,  rgba(45, 73, 107, 0.77) 60%, rgba(247,247,247,1) 100%);
+}
+
+.main-buttons .btn-r{
+    border: 5px solid rgba(120, 153, 194, 0.541);
+}
+
+.main-buttons .btn-r:hover{
+    background: linear-gradient(120deg, rgba(39, 73, 114, 0.77) 77%,  rgba(3, 36, 76, 0.77) 60%, rgb(167, 161, 161) 100%);
+}
+
+.main-buttons .btn-r, .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shift , .alpha, .mode, .on{
+    position: relative;
+}
+
+.main-buttons .btn h6{
+    position: absolute;
+    top: -13px;
+    left: 5px;
+}
+
+.main-buttons .mode h6{
+    left: -3px;
+}
+
+.main-buttons h5{
+    position: absolute;
+    top: -13px;
+    left: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+}
+
+.mode h6{
+    left: 0;
+}
+
+.mode h5{
+    color: rgb(166, 122, 10);
+}
+
+.shift{
+    color: rgb(166, 122, 10);
+    margin-top: -10px;
+    margin-left: 3px;
+}
+
+.alpha{
+    color: rgb(145, 38, 38);
+    /* margin-top: 10px; */
+}
+
+.on{
+    color: black;
+    margin-top: -10px;
+    margin-right: 3px;
+}
+
+.main-buttons h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+}
+
+.main-buttons .btn{
+    background: linear-gradient(130deg, rgba(247, 247, 247, 0.655) 0%, rgba(53, 82, 118, 0.77) 30%, rgba(42, 75, 115, 0.77) 60%);
+    border:1px solid rgba(22, 39, 62, 0.437);
+}
+
+.main-buttons .btn:hover{
+    background: linear-gradient(130deg, rgba(26, 15, 15, 0.655) 0%, rgba(22, 39, 62, 0.77) 30%, rgba(22, 37, 56, 0.77) 60%);
+
+}
+
+.main-buttons .btn-r{
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.main-buttons .btn-r h6{
+    color: rgba(64, 64, 104, 0.527);
+    font-weight: 900;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 11px;
+}
+
+.main-buttons .btn-r{
+    position: relative;
+}
+
+.main-buttons .btn-r .fa-chevron-up{
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-buttons .btn-r .fa-chevron-down{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* black-buttons */
+.black-buttons{
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -15px;
+}
+
+.black-buttons .row-1, .row-2, .row-3, .row-4{
+    display: flex;
+    justify-content: space-around;
+    padding: 7px 0;
+}
+
+.black-buttons .row-1 .btn-l{
+    margin-right: 45px;
+}
+
+.black-buttons .row-1 .btn-ri{
+    margin-left: 45px;
+}
+
+.black-buttons .btn h6{
+    font-size: 11px;
+}
+
+.black-buttons .txt h6{
+    font-size: 9px;  
+}
+
+.black-buttons .btn{
+    width: 35px;
+    height: 20px;
+    border-radius: 5px;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    background-color: rgba(0, 0, 0, 0.778);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.black-buttons .btn:hover{
+    transform: scale(1.01);
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.black-buttons p{
+    position: absolute;
+    top: -12px;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: rgb(166, 122, 10);
+}
+
+.black-buttons .number-system{
+    left: 16px;
+    color: rgb(32, 161, 161);
+}
+
+.black-buttons .abc{
+    right: 5px;
+    color: rgb(200, 25, 25);
+}
+
+.black-buttons .two-txt{
+    left: 3px;
+}
+
+/* common buttons */
+.common-buttons button{
+    border: 0;
+    width: 37px;
+    height: 25px;
+    border-radius: 5px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    cursor: pointer;
+}
+
+.common-buttons{
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.common-buttons .row-1, .row-2, .row-3, .row-4{
+    display: flex;
+    justify-content: space-around;
+    padding: 7px 0;
+}
+
+.common-buttons .btn h6{
+    font-size: 8.5px;
+    
+}
+
+.common-buttons .btn{
+    width: 40px;
+    height: 29px;
+    cursor: pointer;
+    border: 1.1px solid black;
+    border-radius: 5px;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.292);
+    position: relative;
+}
+
+.common-buttons button:hover{
+    background-color: rgba(220, 220, 220, 0.942);
+    transform: scale(1.01);
+}
+
+.common-buttons p{
+    position: absolute;
+    top: -12px;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: rgb(166, 122, 10);
+}
+
+.common-buttons .abc{
+    right: 2px;
+    color: rgb(200, 25, 25);
+}
+
+.common-buttons .two-txt{
+    left: 2px;
+}
+
+.common-buttons .btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.common-buttons .btn h5{
+    font-size: 20px;
+}
+
+.common-buttons .txt-o h5{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.common-buttons .txt h5{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.common-buttons .long h5{
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.common-buttons .txt-o{
+    background-color: rgb(214, 103, 33);
+}
+
+.common-buttons .txt-o button{
+    background-color: rgb(214, 103, 33);
+}
+.common-buttons .txt-o button:hover{
+    background-color: rgb(188, 87, 24);
+}
+
+/* annimations */
+
+.calculator .cover{
+    position: absolute;
+    left: -5px;
+    top: -4px;
+    min-width: 320px;
+    max-width: 320px;
+    max-height: 600px;
+    min-height: 600px;
+    padding-bottom: 30px;
+    background: rgb(0, 60, 92);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    animation: coverUp 1s linear;
+    z-index: 9;
+    transition: 1s linear;   
+}
+
+@media(max-width:600px ) and (min-width:100px){
+    .container{
+       margin-top: -40px; 
+   }
+}
+
+.cover h1{
+    color: rgba(255, 255, 255, 0.714);
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-shadow: 2px 2px rgb(77, 77, 77);
+}
+
+.cover .left{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.682);
+    border-radius: 50%;
+}
+
+.cover .right{
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.737);
+    border-radius: 50%;
+}
+
+.calculator .cover-t{
+    position: absolute;
+    left: -14px;
+    top: 800px;
+    min-width: 340px;
+    max-width: 340px;
+    max-height: 620px;
+    min-height: 619px;
+    padding-bottom: 30px;
+    background-color:rgb(0, 60, 92);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    animation: coverDown 1s linear;
+    z-index: 9;
+    transition: 1s linear;
+}
+
+.calculator .cover-btn{
+    position: absolute;
+    bottom: 2px;
+    right: -44px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: rgba(36, 206, 39, 0.779);
+    animation: blink .8s linear 1s infinite;
+}
+
+@keyframes blink{
+    0%{
+        border: 2px solid rgb(255, 255, 255);
+    }
+    50%{
+        border: 4px solid rgba(0, 0, 0, 0.666);
+
+    }
+    100%{
+        border: 2px solid rgb(255, 255, 255);
+    }
+}
+
+.calculator .coverbtn-t{
+    position: absolute;
+    bottom: 2px;
+    right: -44px;
+    width: 26px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: rgb(0, 60, 92);
+    border: 3px solid white;
+    animation: none;
+}
+
+/* casio animation */
+.calculator .show{
+    position: absolute;
+    top: 32px;
+    right: -150px;
+    z-index: 2;
+    font-size: 30px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.578);
+    animation: none;
+}
+
+.calculator .show-t{
+    position: absolute;
+    top: 32px;
+    right: -150px;
+    z-index: 2;
+    font-size: 30px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.608);
+    animation: show 2.3s linear .6s ;  
+}
+
+@keyframes show{
+    0%{
+        right: -150px;
+        color: rgba(0, 0, 0, 0.275);
+    }
+    50%{
+        right: 5px;
+        color: rgba(0, 0, 0, 0.96);
+    }
+    75%{
+        right: 5px;
+        color: rgba(0, 0, 0, 0.96);
+    }
+    100%{
+        right: 5px;
+        color: rgba(0, 0, 0, 0.485);
+
+    }
+}

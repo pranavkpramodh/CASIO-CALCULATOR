@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/unnamed.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>CASIO Calculator</title>
+</head>
+<body>
+    <!-- view port container -->
+    <div class="container">
+        <!-- calculator container -->
+        <div class="calculator">
+            <div class="border"></div>
+            <div class="closser"></div>
+            <div class="design-l"></div>
+            <div class="design-r"></div>
+            <div class="design-tl"></div>
+            <div class="design-rl"></div>
+            <div class="center"></div>
+            <div id="cover" class="cover "><div class="left"></div><div class="right"></div><h1>CASIO</h1></div>
+            <div id="coverbtn" class="cover-btn coverbtn-t" style="cursor: pointer;"></div>
+            <div class="head-section">
+                <div class="top">
+                    <div class="left"><h2>CASIO</h2>
+                        <br><br><h5>fx-991ES PLUS</h5>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="bottom">
+                    <div class="left"><h5>NATURAL-V.P.A.M.</h5></div>
+                    <div class="right"><h6>TWO WAY POWER</h6></div>
+                </div>
+            </div>
+            <!-- screen -->
+            <div class="screen-container">
+                <div class="screen">
+                    <div class="show " id="show">CASIO...</div>
+                    <input type="text" name="" id=""><div id="screen" class="screen-div"></div></div>
+            </div>
+
+            <!-- main buttons -->
+            <div class="main-buttons">
+                <div class="btn shift"><h6>SHIFT</h6></div>
+                <div class="btn alpha"><h6>ALPHA</h6></div>
+                <div class="btn-r"><h6><i class="fa-sharp fa-solid fa-chevron-up"></i><i class="fa-sharp fa-solid fa-chevron-left"></i>&nbsp;REPLAY&nbsp;<i class="fa-sharp fa-solid fa-chevron-right"></i><i class="fa-sharp fa-solid fa-chevron-down"></i></h6></div>
+                <div class="btn mode"><h6>MODE</h6> <h5>SETUP</h5></div>
+                <div class="btn on " id="on"><h6> ON</h6></div>
+            </div>
+
+            <!-- black buttons -->
+            <div class="black-buttons">
+                <div class="row-1">
+                    <div class="btn txt"><p>SOLVE =</p><h6>CALC</h6></div>
+                    <div class="btn btn-l"><p>d/dx :</p><h6>∫<sub>0</sub><sup>0</sup></h6></div>
+                    <div class="btn btn-ri"><p>x!</p><h6>x <sup>-1</sup></h6></div>
+                    <div class="btn"><p>E</p><h6>log.</h6></div>
+                </div>
+
+                <div class="row-2">
+                    <div class="btn"><p>÷</p><h6>÷</h6></div>
+                    <div class="btn" id="sqrt"><p>3√</p><h6>√</h6></div>
+                    <div class="btn" id="square"><p class="two-txt">x<sup>3</sup></p><p class="number-system">DEC</p><h6>x<sup>2</sup></h6> </div>
+                    <div class="btn"><p class="two-txt">√</p><h6>x<sup>-</sup><p class="number-system">HEX</p></h6></div>
+                    <div class="btn" id="log"><p class="two-txt">10<sup>-</sup></p><p class="number-system">BIN</p><h6>log</h6></div>
+                    <div class="btn" id="ln"><p class="two-txt">e<sup>-</sup></p><p class="number-system">OCT</p><p class="two-txt"></p><h6>ln</h6></div>
+                </div>
+
+                <div class="row-3">
+                    <div class="btn"><p class="two-txt">Z</p><p class="abc">A</p><h6>(--)</h6></div>
+                    <div class="btn"><p class="two-txt"><i class="fa-sharp fa-solid fa-left-long"></i></p><p class="abc">A</p><h6>.' "</h6></div>
+                    <div class="btn"><p class="two-txt">Abs</p><p class="abc">C</p><h6>hyp</h6></div>
+                    <div class="btn" id="sin"><p class="two-txt">sin<sup>-1</sup></p><p class="abc">D</p><h6>sin</h6></div>
+                    <div class="btn" id="cos"><p class="two-txt">cos<sup>-1</sup></p><p class="abc">E</p><h6>cos</h6></div>
+                    <div class="btn" id="tan"> <p class="two-txt">tan<sup>-1</sup></p><p class="abc">F</p><h6>tan</h6></div>
+                </div>
+
+                <div class="row-4">
+                    <div class="btn txt"><p class="two-txt">STO</p><h6>RCL</h6></div>
+                    <div class="btn txt"><p class="two-txt"><i class="fa-sharp fa-solid fa-left-long"></i></p><p class="abc"><i>i</i></p><h6>ENG</h6></div>
+                    <div class="btn"><p class="two-txt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%</p><h6>(</h6></div>
+                    <div class="btn"><p class="two-txt">❞</p><p class="abc">X</p><h6>)</h6></div>
+                    <div class="btn txt"><p class="two-txt">ab/c</p><p class="abc">Y</p><h6>S<=>D</h6></div>
+                    <div class="btn"><p class="two-txt">M-</p><p class="abc">M</p><h6>M+</h6></div>
+                </div>
+            </div>
+
+            <!-- common buttons -->
+            <div class="common-buttons">
+                <div class="row-1">
+                    <div class="btn"><p>CONST</p><button onclick="displayNum(7)"><h5>7</h5></button></div>
+                    <div class="btn"><p>CONV</p><button onclick="displayNum(8)"><h5>8</h5></button></div>
+                    <div class="btn"><p>CLR</p><button onclick="displayNum(9)"><h5>9</h5></button></div>
+                    <div class="btn txt-o"><p>INS</p><button onclick="removeLast()"><h5>DEL</h5></button></div>
+                    <div class="btn txt-o"><p>OFF</p><button onclick="clearScreen()"><h5>AC</h5></button></div>
+                </div>
+
+                <div class="row-2">
+                    <div class="btn"><p>MATRIX</p><button onclick="displayNum(4)"><h5>4</h5></button></div>
+                    <div class="btn"><p>VECTOR</p><button onclick="displayNum(5)"><h5>5</h5></button></div>
+                    <div class="btn"><p></p><button onclick="displayNum(6)"><h5>6</h5></button></div>
+                    <div class="btn"><p>nPr</p><button onclick="displayNum('*')"><h5>X</h5></button></div>
+                    <div class="btn"><p>nCr</p><button onclick="displayNum('/')"><h5>÷</h5></button></div>
+                </div>
+
+                <div class="row-3">
+                    <div class="btn"><p>STAT</p><button onclick="displayNum(1)"><h5>1</h5></button></div>
+                    <div class="btn"><p>CMPLX</p><button onclick="displayNum(2)"><h5>2</h5></button></div>
+                    <div class="btn"><p>BASE</p><button onclick="displayNum(3)"><h5>3</h5></button></div>
+                    <div class="btn"><p>Pol</p><button onclick="displayNum('+')"><h5>+</h5></button></div>
+                    <div class="btn"><p>Rec</p><button onclick="displayNum('-')"><h5>−</h5></button></div>
+                </div>
+
+                <div class="row-4">
+                    <div class="btn"><p>Rnd</p><button onclick="displayNum(0)"><h5>0</h5></button></div>
+                    <div class="btn"><p class="two-txt">Ran# </p> <p class="abc">Int</p><button onclick="displayNum('.')"><h5>.</h5></button></div>
+                    <div class="btn long"><p class="two-txt">𝝅</p><p class="abc">e</p><button><h5>x10<sup>x</sup></h5></button></div>
+                    <div class="btn txt"><p>DRG <i class="fa-sharp fa-solid fa-caret-right"></i></p><button onclick="result()"><h5>Ans</h5></button></div>
+                    <div class="btn"> <button onclick="result()"><h5>=</h5></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
